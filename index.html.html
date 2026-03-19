@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鄧師傅功夫菜｜2026 節慶套組規劃</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #C00000;
+  --red-deep: #8B0000;
+  --red-light: #fff0f0;
+  --gold: #B8860B;
+  --gold-light: #FFF8DC;
+  --ink: #1a1008;
+  --ink-mid: #4a3520;
+  --ink-light: #8B6914;
+  --paper: #FDFAF5;
+  --paper-warm: #F5EDD8;
+  --border: rgba(184,134,11,0.25);
+  --shadow: rgba(26,16,8,0.12);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 50%, rgba(192,0,0,0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 85% 30%, rgba(184,134,11,0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 50% at 50% 100%, rgba(192,0,0,0.15) 0%, transparent 50%);
+}
+
+.hero-pattern {
+  position: absolute; inset: 0; opacity: 0.04;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #fff 0px, #fff 1px,
+    transparent 1px, transparent 28px
+  );
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 900px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  border: 1px solid rgba(184,134,11,0.5);
+  padding: 0.4em 1.4em;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.2s forwards;
+}
+
+.hero-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.4s forwards;
+}
+
+.hero-title span { color: var(--red); }
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 3.5rem;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.6s forwards;
+}
+
+.hero-pills {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;
+  margin-bottom: 3.5rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.8s forwards;
+}
+
+.pill {
+  display: flex; align-items: center; gap: 0.5rem;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.875rem;
+  padding: 0.5em 1.1em;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  transition: all 0.2s;
+}
+.pill:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.3); }
+.pill-icon { font-size: 1.1em; }
+
+.hero-stat {
+  display: flex; justify-content: center; gap: 3rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 1.0s forwards;
+}
+
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 2rem; font-weight: 900;
+  color: #fff;
+  display: block;
+}
+.stat-num em { color: var(--gold); font-style: normal; }
+.stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+
+/* ── NAV ── */
+.nav-bar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(26,16,8,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(184,134,11,0.2);
+  padding: 0 2rem;
+  display: flex; align-items: center; gap: 0; overflow-x: auto;
+}
+
+.nav-bar::-webkit-scrollbar { height: 2px; }
+.nav-bar::-webkit-scrollbar-track { background: transparent; }
+.nav-bar::-webkit-scrollbar-thumb { background: var(--gold); }
+
+.nav-logo {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.9rem; font-weight: 700;
+  color: #fff; white-space: nowrap;
+  padding-right: 2rem;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.nav-link {
+  display: flex; align-items: center; gap: 0.4rem;
+  font-size: 0.82rem; font-weight: 500;
+  color: rgba(255,255,255,0.55);
+  padding: 1rem 0.8rem;
+  white-space: nowrap; text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.nav-link:hover, .nav-link.active {
+  color: #fff;
+  border-bottom-color: var(--red);
+}
+
+/* ── SECTION ── */
+.section {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.section:last-child { border-bottom: none; }
+
+.container { max-width: 1300px; margin: 0 auto; padding: 0 2.5rem; }
+
+.section-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.section-tag {
+  font-size: 2.5rem; line-height: 1;
+}
+
+.section-info { }
+
+.section-month {
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.section-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.85rem; font-weight: 900;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.section-note {
+  background: var(--paper-warm);
+  border-left: 3px solid var(--gold);
+  padding: 0.75rem 1.1rem;
+  font-size: 0.82rem;
+  color: var(--ink-mid);
+  border-radius: 0 6px 6px 0;
+  max-width: 340px;
+  text-align: right;
+}
+.section-note strong { color: var(--red); }
+
+/* ── BUNDLE GRID ── */
+.bundle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .bundle-grid { grid-template-columns: 1fr; }
+  .section-header { grid-template-columns: auto 1fr; }
+  .section-note { max-width: 100%; text-align: left; grid-column: 1/-1; }
+}
+
+/* ── CARD ── */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 12px var(--shadow);
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(26,16,8,0.18);
+}
+
+.card-head {
+  padding: 1.25rem 1.4rem 1rem;
+  position: relative;
+}
+
+.card-emoji {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.card-name {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.1rem; font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+.card-tagline {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.04em;
+}
+
+.card-body { padding: 1.2rem 1.4rem; flex: 1; }
+
+.items-label {
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--ink-light);
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.item-row {
+  display: flex; align-items: flex-start;
+  gap: 0.65rem; margin-bottom: 0.65rem;
+}
+
+.item-bullet {
+  width: 7px; height: 7px; border-radius: 50%;
+  flex-shrink: 0; margin-top: 0.45rem;
+}
+
+.item-name { font-size: 0.9rem; color: var(--ink); flex: 1; line-height: 1.45; }
+.item-qty { font-size: 0.82rem; color: #aaa; flex-shrink: 0; font-weight: 500; }
+
+.evidence {
+  margin-top: 1.1rem;
+  background: var(--paper-warm);
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.78rem;
+  color: var(--ink-mid);
+  line-height: 1.5;
+}
+.evidence::before { content: '📊 '; }
+
+.card-footer {
+  padding: 1rem 1.4rem;
+  border-top: 1px solid var(--border);
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 1rem;
+}
+
+.price-block { }
+.price-main {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.85rem; font-weight: 900;
+  line-height: 1;
+  display: block;
+}
+.price-market { font-size: 0.75rem; color: #aaa; margin-top: 0.2rem; }
+
+.target-badge {
+  font-size: 0.72rem; font-weight: 700;
+  color: #fff;
+  padding: 0.45em 0.9em;
+  border-radius: 999px;
+  text-align: center;
+  line-height: 1.4;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── SUMMARY TABLE ── */
+.summary-section {
+  background: var(--ink);
+  color: #fff;
+  padding: 5rem 0;
+}
+
+.summary-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 2rem; font-weight: 900;
+  color: #fff; margin-bottom: 0.5rem;
+}
+.summary-sub { color: rgba(255,255,255,0.45); font-size: 0.875rem; margin-bottom: 2.5rem; }
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.summary-table th {
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  padding: 0.6rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.summary-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  vertical-align: middle;
+}
+
+.summary-table tr:hover td { background: rgba(255,255,255,0.03); }
+
+.fest-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.78rem; font-weight: 700;
+  padding: 0.3em 0.8em;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.bundle-name-cell { font-weight: 600; color: #fff; }
+.items-cell { color: rgba(255,255,255,0.5); font-size: 0.82rem; }
+.price-cell { font-family: 'Noto Serif TC', serif; font-size: 1.1rem; font-weight: 900; }
+.pos-cell { color: rgba(255,255,255,0.6); font-size: 0.82rem; }
+.target-cell { color: rgba(255,255,255,0.45); font-size: 0.8rem; }
+
+/* ── PRICING SECTION ── */
+.pricing-section {
+  padding: 5rem 0;
+  background: var(--paper-warm);
+}
+
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) { .tier-grid { grid-template-columns: 1fr; } }
+
+.tier-card {
+  border-radius: 16px;
+  padding: 2rem;
+  border: 2px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.tier-label {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.15rem; font-weight: 900;
+  margin-bottom: 0.3rem;
+}
+
+.tier-range {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.6rem; font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.tier-desc {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  opacity: 0.75;
+}
+
+.tier-examples {
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6rem;
+  opacity: 0.55;
+  text-transform: uppercase;
+}
+
+.tier-list { font-size: 0.82rem; line-height: 1.9; opacity: 0.7; }
+
+.exec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 768px) { .exec-grid { grid-template-columns: 1fr; } }
+
+.exec-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.4rem 1.5rem;
+  display: flex; gap: 1rem; align-items: flex-start;
+}
+
+.exec-no {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.4rem; font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.exec-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.35rem; }
+.exec-body { font-size: 0.82rem; color: var(--ink-mid); line-height: 1.6; }
+
+/* ── SECTION COLORS ── */
+.sec-spring { background: #fff; }
+.sec-spring .card-head { background: #C00000; }
+.sec-spring .card-head.alt1 { background: #8B4513; }
+.sec-spring .card-head.alt2 { background: #534AB7; }
+
+.sec-tomb .card-head { background: #8B6914; }
+.sec-tomb .card-head.alt1 { background: #5F4A2A; }
+.sec-tomb .card-head.alt2 { background: #3B6D11; }
+
+.sec-mother .card-head { background: #D4537E; }
+.sec-mother .card-head.alt1 { background: #993556; }
+.sec-mother .card-head.alt2 { background: #BA7517; }
+
+.sec-dragon .card-head { background: #0F6E56; }
+.sec-dragon .card-head.alt1 { background: #085041; }
+.sec-dragon .card-head.alt2 { background: #1D9E75; }
+
+.sec-father .card-head { background: #185FA5; }
+.sec-father .card-head.alt1 { background: #0C447C; }
+.sec-father .card-head.alt2 { background: #534AB7; }
+
+.sec-mid .card-head { background: #BA7517; }
+.sec-mid .card-head.alt1 { background: #854F0B; }
+.sec-mid .card-head.alt2 { background: #533806; }
+
+.sec-yearend .card-head { background: #C00000; }
+.sec-yearend .card-head.alt1 { background: #2A2A2A; }
+.sec-yearend .card-head.alt2 { background: #8B4513; }
+
+/* badge colors */
+.badge-spring { background: #C00000; }
+.badge-tomb { background: #8B6914; }
+.badge-mother { background: #D4537E; }
+.badge-dragon { background: #0F6E56; }
+.badge-father { background: #185FA5; }
+.badge-mid { background: #BA7517; }
+.badge-yearend { background: #C00000; }
+
+/* price colors */
+.price-red { color: #C00000; }
+.price-brown { color: #8B4513; }
+.price-purple { color: #534AB7; }
+.price-gold { color: #8B6914; }
+.price-forest { color: #3B6D11; }
+.price-pink { color: #D4537E; }
+.price-wine { color: #993556; }
+.price-blue { color: #185FA5; }
+.price-navy { color: #0C447C; }
+.price-amber { color: #BA7517; }
+.price-green { color: #0F6E56; }
+.price-teal { color: #1D9E75; }
+.price-dark-amber { color: #854F0B; }
+.price-espresso { color: #533806; }
+.price-ink { color: #2A2A2A; }
+.price-sienna { color: #8B4513; }
+
+/* bullet colors */
+.bullet-red { background: #C00000; }
+.bullet-brown { background: #8B4513; }
+.bullet-purple { background: #534AB7; }
+.bullet-gold { background: #8B6914; }
+.bullet-forest { background: #3B6D11; }
+.bullet-pink { background: #D4537E; }
+.bullet-wine { background: #993556; }
+.bullet-blue { background: #185FA5; }
+.bullet-navy { background: #0C447C; }
+.bullet-amber { background: #BA7517; }
+.bullet-green { background: #0F6E56; }
+.bullet-teal { background: #1D9E75; }
+.bullet-dark-amber { background: #854F0B; }
+.bullet-espresso { background: #533806; }
+.bullet-ink { background: #2A2A2A; }
+.bullet-sienna { background: #8B4513; }
+
+/* section alt backgrounds */
+.sec-alt { background: #FAFAF7; }
+
+/* FOOTER */
+.footer {
+  background: var(--ink); color: rgba(255,255,255,0.35);
+  text-align: center; padding: 2.5rem;
+  font-size: 0.8rem; letter-spacing: 0.08em;
+}
+.footer strong { color: rgba(255,255,255,0.7); }
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Section divider line */
+.divider {
+  width: 48px; height: 3px;
+  background: var(--red);
+  margin: 0.75rem 0;
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">博竑食品有限公司 ・ 鄧師傅功夫菜</span>
+    <h1 class="hero-title">2026年<br><span>節慶套組</span>規劃</h1>
+    <p class="hero-sub">依2025官網銷售數據設計 ・ 七大節慶 ・ 21款套組</p>
+    <div class="hero-pills">
+      <div class="pill"><span class="pill-icon">🧧</span>春節年菜</div>
+      <div class="pill"><span class="pill-icon">🌿</span>清明掃墓</div>
+      <div class="pill"><span class="pill-icon">🌸</span>母親節</div>
+      <div class="pill"><span class="pill-icon">🏮</span>端午節</div>
+      <div class="pill"><span class="pill-icon">🍺</span>父親節</div>
+      <div class="pill"><span class="pill-icon">🥮</span>中秋節</div>
+      <div class="pill"><span class="pill-icon">🎊</span>尾牙圍爐</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-item">
+        <span class="stat-num"><em>21</em></span>
+        <span class="stat-label">款套組</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num"><em>$880</em>–<em>$1,280</em></span>
+        <span class="stat-label">售價區間</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num"><em>33,478</em></span>
+        <span class="stat-label">2025官網銷售件數</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NAV -->
+<nav class="nav-bar">
+  <div class="nav-logo">鄧師傅功夫菜</div>
+  <a href="#spring" class="nav-link">🧧 春節</a>
+  <a href="#tomb" class="nav-link">🌿 清明</a>
+  <a href="#mother" class="nav-link">🌸 母親節</a>
+  <a href="#dragon" class="nav-link">🏮 端午</a>
+  <a href="#father" class="nav-link">🍺 父親節</a>
+  <a href="#mid" class="nav-link">🥮 中秋</a>
+  <a href="#yearend" class="nav-link">🎊 尾牙</a>
+  <a href="#summary" class="nav-link">📋 總覽</a>
+  <a href="#pricing" class="nav-link">💰 定價</a>
+</nav>
+
+<!-- SPRING -->
+<section id="spring" class="section sec-spring">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">🧧</div>
+      <div class="section-info">
+        <div class="section-month">1–2月 ・ 春節年菜</div>
+        <h2 class="section-title">春節年菜套組</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="section-note">
+        <strong>7,952件</strong>——1月官網全年最高<br>豬腳＋蹄膀＋海鮮羹湯佔64%
+      </div>
+    </div>
+    <div class="bundle-grid reveal">
+
+      <div class="card">
+        <div class="card-head" style="background:#C00000;">
+          <span class="card-emoji">🍖</span>
+          <div class="card-name">招牌豬腳圍爐組</div>
+          <div class="card-tagline">最暢銷主角 × 年節必備</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-red"></div><div class="item-name">乾燒豬腳（4入綜合）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-red"></div><div class="item-name">鮑魚海皇羹</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-red"></div><div class="item-name">元寶花生</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-red"></div><div class="item-name">五木麵線（贈品）</div><div class="item-qty">×1</div></div>
+          <div class="evidence">豬腳麵線春節核心，單品銷售超1,330件；加入元寶花生強化吉祥意象。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-red">$1,080</span>
+            <div class="price-market">市值約 $1,280</div>
+          </div>
+          <div class="target-badge" style="background:#C00000;">2人圍爐<br>送禮自用</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#8B4513;">
+          <span class="card-emoji">🦪</span>
+          <div class="card-name">鮑魚海味年菜組</div>
+          <div class="card-tagline">高端年菜 × 宴席主角</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-brown"></div><div class="item-name">鮑魚干貝荷葉飯</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-brown"></div><div class="item-name">鮑魚海皇羹</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-brown"></div><div class="item-name">花膠虎掌燴干貝</div><div class="item-qty">×1</div></div>
+          <div class="evidence">鮑魚干貝荷葉飯春節651件No.1、海皇羹327件。兩者加乘效果最強。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-brown">$1,180</span>
+            <div class="price-market">市值約 $1,450</div>
+          </div>
+          <div class="target-badge" style="background:#8B4513;">企業送禮<br>高端首選</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#534AB7;">
+          <span class="card-emoji">🥩</span>
+          <div class="card-name">蹄膀富貴全餐組</div>
+          <div class="card-tagline">大份量 × 家庭聚餐首選</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-purple"></div><div class="item-name">乾燒蹄膀（整粒）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-purple"></div><div class="item-name">大四喜（瑤柱獅子頭）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-purple"></div><div class="item-name">油燜筍（2入/盒）</div><div class="item-qty">×1</div></div>
+          <div class="evidence">蹄膀系列春節合計1,400+件，大四喜529件，油燜筍461件，吉祥意象強。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-purple">$1,180</span>
+            <div class="price-market">市值約 $1,380</div>
+          </div>
+          <div class="target-badge" style="background:#534AB7;">4–6人聚餐<br>一桌搞定</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TOMB -->
+<section id="tomb" class="section sec-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">🌿</div>
+      <div class="section-info">
+        <div class="section-month">4月 ・ 清明掃墓</div>
+        <h2 class="section-title">清明掃墓套組</h2>
+        <div class="divider" style="background:#8B6914;"></div>
+      </div>
+      <div class="section-note">
+        <strong>2,334件</strong>——4月官網（話題套組帶動）<br>蔬食清明組合幾乎無競品
+      </div>
+    </div>
+    <div class="bundle-grid reveal">
+
+      <div class="card">
+        <div class="card-head" style="background:#8B6914;">
+          <span class="card-emoji">🍖</span>
+          <div class="card-name">清明三牲禮盒</div>
+          <div class="card-tagline">祭祖必備 × 傳統正式</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-gold"></div><div class="item-name">乾燒豬腳（4入綜合）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-gold"></div><div class="item-name">玫瑰油雞</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-gold"></div><div class="item-name">蔥㸆鯽魚</div><div class="item-qty">×1</div></div>
+          <div class="evidence">清明三牲「豬、雞、魚」傳統搭配。玫瑰油雞275件、蔥㸆鯽魚450件均有穩定銷量。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-gold">$980</span>
+            <div class="price-market">市值約 $1,200</div>
+          </div>
+          <div class="target-badge" style="background:#8B6914;">祭祖首選<br>方便攜帶</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#5F4A2A;">
+          <span class="card-emoji">🥘</span>
+          <div class="card-name">掃墓後家族聚餐組</div>
+          <div class="card-tagline">掃墓完、直接開飯</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet" style="background:#5F4A2A;"></div><div class="item-name">乾燒蹄膀切片（半粒）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet" style="background:#5F4A2A;"></div><div class="item-name">東坡風味｜功夫銷魂滷</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet" style="background:#5F4A2A;"></div><div class="item-name">四喜烤麩（蔬食可食）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet" style="background:#5F4A2A;"></div><div class="item-name">元寶花生</div><div class="item-qty">×1</div></div>
+          <div class="evidence">功夫銷魂滷全年592件，四喜烤麩297件。家族小聚，蹄膀切片好入口。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main" style="color:#5F4A2A;">$1,080</span>
+            <div class="price-market">市值約 $1,280</div>
+          </div>
+          <div class="target-badge" style="background:#5F4A2A;">家族聚餐<br>4–6人份</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#3B6D11;">
+          <span class="card-emoji">🌱</span>
+          <div class="card-name">春日蔬食祭祖組</div>
+          <div class="card-tagline">蔬食長輩也能吃</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-forest"></div><div class="item-name">四喜烤麩（蔬食可食）</div><div class="item-qty">×2</div></div>
+          <div class="item-row"><div class="item-bullet bullet-forest"></div><div class="item-name">梅干扣杏鮑菇</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-forest"></div><div class="item-name">蔬喜個人饗宴組</div><div class="item-qty">×1</div></div>
+          <div class="evidence">市場缺口：蔬食清明組合幾乎無競品。四喜烤麩297件，梅干杏鮑菇73件。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-forest">$880</span>
+            <div class="price-market">市值約 $1,050</div>
+          </div>
+          <div class="target-badge" style="background:#3B6D11;">蔬食長輩<br>差異化品項</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MOTHER -->
+<section id="mother" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">🌸</div>
+      <div class="section-info">
+        <div class="section-month">5月 ・ 母親節</div>
+        <h2 class="section-title">母親節套組</h2>
+        <div class="divider" style="background:#D4537E;"></div>
+      </div>
+      <div class="section-note">
+        <strong>1,223件</strong>——5月官網<br>豬腳/蹄膀佔49%，媽媽愛膠原系
+      </div>
+    </div>
+    <div class="bundle-grid reveal">
+
+      <div class="card">
+        <div class="card-head" style="background:#D4537E;">
+          <span class="card-emoji">🌸</span>
+          <div class="card-name">美人蹄膀套組</div>
+          <div class="card-tagline">膠原蛋白 × 媽媽最愛</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-pink"></div><div class="item-name">乾燒蹄膀（整粒）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-pink"></div><div class="item-name">玫瑰蜜汁心太軟</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-pink"></div><div class="item-name">冰糖雪梨燉銀耳（4入）</div><div class="item-qty">×1</div></div>
+          <div class="evidence">蹄膀全年1,200件官網主力，心太軟168件、銀耳甜品144件，膠原+甜品完美組合。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-pink">$1,180</span>
+            <div class="price-market">市值約 $1,380</div>
+          </div>
+          <div class="target-badge" style="background:#D4537E;">送禮高質感<br>媽媽喜歡</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#993556;">
+          <span class="card-emoji">🥘</span>
+          <div class="card-name">暖心花雕全餐組</div>
+          <div class="card-tagline">媽媽的家常味 × 暖胃首選</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-wine"></div><div class="item-name">花雕雞鍋</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-wine"></div><div class="item-name">乾燒蹄膀切片（半粒）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-wine"></div><div class="item-name">荔香鳳梨燉銀耳（4入）</div><div class="item-qty">×1</div></div>
+          <div class="evidence">花雕雞鍋341件，搭配蹄膀切片低門檻，荔枝甜品增加精緻感。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-wine">$1,080</span>
+            <div class="price-market">市值約 $1,280</div>
+          </div>
+          <div class="target-badge" style="background:#993556;">暖心鍋物<br>2人份最佳</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#BA7517;">
+          <span class="card-emoji">🦪</span>
+          <div class="card-name">海鮮感謝媽媽組</div>
+          <div class="card-tagline">精緻海味 × 高端感謝</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-amber"></div><div class="item-name">鮑魚干貝荷葉飯</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-amber"></div><div class="item-name">花膠虎掌燴干貝</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-amber"></div><div class="item-name">桂圓紅棗燉銀耳（4入）</div><div class="item-qty">×1</div></div>
+          <div class="evidence">鮑魚干貝荷葉飯全年1,303件，花膠虎掌433件，主打「給媽媽最好的」。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-amber">$1,280</span>
+            <div class="price-market">市值約 $1,550</div>
+          </div>
+          <div class="target-badge" style="background:#BA7517;">高端送禮<br>精緻海味</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DRAGON BOAT -->
+<section id="dragon" class="section sec-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">🏮</div>
+      <div class="section-info">
+        <div class="section-month">6月 ・ 端午節</div>
+        <h2 class="section-title">端午節套組</h2>
+        <div class="divider" style="background:#0F6E56;"></div>
+      </div>
+      <div class="section-note">
+        <strong>⚠️ 補強最大機會</strong><br>6月1,173件但端午商品幾乎空白<br>定位「功夫菜替代粽子禮盒」
+      </div>
+    </div>
+    <div class="bundle-grid reveal">
+
+      <div class="card">
+        <div class="card-head" style="background:#0F6E56;">
+          <span class="card-emoji">🏮</span>
+          <div class="card-name">端午功夫菜禮盒</div>
+          <div class="card-tagline">功夫菜替代粽子禮 × 差異化</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-green"></div><div class="item-name">梅汁叉燒排骨</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-green"></div><div class="item-name">富貴雙方</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-green"></div><div class="item-name">鮑魚海皇羹</div><div class="item-qty">×1</div></div>
+          <div class="evidence">叉燒排骨600件全年暢銷，富貴雙方465件，搭配羹湯，定位「不一樣的端午禮」。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-green">$1,080</span>
+            <div class="price-market">市值約 $1,280</div>
+          </div>
+          <div class="target-badge" style="background:#0F6E56;">端午送禮<br>差異化主打</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#085041;">
+          <span class="card-emoji">🥘</span>
+          <div class="card-name">端午家宴鍋物組</div>
+          <div class="card-tagline">端午聚餐 × 一鍋到底</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet" style="background:#085041;"></div><div class="item-name">金湯酸菜魚</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet" style="background:#085041;"></div><div class="item-name">乾燒豬腳（4入綜合）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet" style="background:#085041;"></div><div class="item-name">四喜烤麩（蔬食可食）</div><div class="item-qty">×1</div></div>
+          <div class="evidence">金湯酸菜魚296件，搭配豬腳+蔬食配菜，適合端午家族小聚。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main" style="color:#085041;">$980</span>
+            <div class="price-market">市值約 $1,200</div>
+          </div>
+          <div class="target-badge" style="background:#085041;">端午聚餐<br>2–3人份</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#1D9E75;">
+          <span class="card-emoji">🍱</span>
+          <div class="card-name">個人熱炒端午組</div>
+          <div class="card-tagline">一人過節也要好好吃</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-teal"></div><div class="item-name">鮑魚干貝荷葉飯</div><div class="item-qty">×2</div></div>
+          <div class="item-row"><div class="item-bullet bullet-teal"></div><div class="item-name">梅汁糖醋肉（熱炒吧）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-teal"></div><div class="item-name">宮保雞丁（熱炒吧）</div><div class="item-qty">×1</div></div>
+          <div class="evidence">熱炒吧梅汁糖醋肉365件、宮保雞丁317件，搭配荷葉飯，個人端午限定。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-teal">$980</span>
+            <div class="price-market">市值約 $1,150</div>
+          </div>
+          <div class="target-badge" style="background:#1D9E75;">個人過節<br>單身小家庭</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FATHER'S DAY -->
+<section id="father" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">🍺</div>
+      <div class="section-info">
+        <div class="section-month">8月 ・ 父親節</div>
+        <h2 class="section-title">父親節套組</h2>
+        <div class="divider" style="background:#185FA5;"></div>
+      </div>
+      <div class="section-note">
+        <strong>3,289件</strong>——7–8月官網合計<br>豬腳系列主導，主打「大口吃肉＋下酒」
+      </div>
+    </div>
+    <div class="bundle-grid reveal">
+
+      <div class="card">
+        <div class="card-head" style="background:#185FA5;">
+          <span class="card-emoji">🍺</span>
+          <div class="card-name">豪豬爸爸大禮盒</div>
+          <div class="card-tagline">豬腳主角 × 爸爸最愛</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-blue"></div><div class="item-name">乾燒豬腳（4入綜合）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-blue"></div><div class="item-name">波本煙燻烤肋排</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-blue"></div><div class="item-name">滷肥腸</div><div class="item-qty">×1</div></div>
+          <div class="evidence">7月添福豬腳367件+乾燒豬腳245件為主力，波本烤肋排全年404件暢銷。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-blue">$1,080</span>
+            <div class="price-market">市值約 $1,280</div>
+          </div>
+          <div class="target-badge" style="background:#185FA5;">豪邁爸爸<br>大份量首選</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#0C447C;">
+          <span class="card-emoji">🥩</span>
+          <div class="card-name">牛肉愛爸下酒組</div>
+          <div class="card-tagline">下酒必備 × 大口吃肉</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-navy"></div><div class="item-name">麻辣牛雙寶（熱炒吧）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-navy"></div><div class="item-name">陳皮牛腱</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-navy"></div><div class="item-name">梅汁叉燒排骨</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-navy"></div><div class="item-name">五更腸旺（熱炒吧）</div><div class="item-qty">×1</div></div>
+          <div class="evidence">麻辣牛雙寶293件、陳皮牛腱299件，訴求「今晚陪爸爸小酌」。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-navy">$1,080</span>
+            <div class="price-market">市值約 $1,300</div>
+          </div>
+          <div class="target-badge" style="background:#0C447C;">下酒好菜<br>牛肉愛好者</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#534AB7;">
+          <span class="card-emoji">🍖</span>
+          <div class="card-name">爸爸豬腳麵線組</div>
+          <div class="card-tagline">傳統好意 × 傳香麵線</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-purple"></div><div class="item-name">添福豬腳麵線禮盒</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-purple"></div><div class="item-name">花生豬腳湯（胡椒風味）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-purple"></div><div class="item-name">東坡風味｜功夫銷魂滷</div><div class="item-qty">×1</div></div>
+          <div class="evidence">添福豬腳麵線7月367件月度No.1，花生豬腳湯全年387件穩定。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-purple">$980</span>
+            <div class="price-market">市值約 $1,180</div>
+          </div>
+          <div class="target-badge" style="background:#534AB7;">傳統送禮<br>健步如飛</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MID-AUTUMN -->
+<section id="mid" class="section sec-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">🥮</div>
+      <div class="section-info">
+        <div class="section-month">9月 ・ 中秋節</div>
+        <h2 class="section-title">中秋節套組</h2>
+        <div class="divider" style="background:#BA7517;"></div>
+      </div>
+      <div class="section-note" style="border-color:#BA7517;">
+        <strong>⚠️ 2025年9月僅534件</strong><br>聯名禮盒只有35件<br>2026年最需大幅補強
+      </div>
+    </div>
+    <div class="bundle-grid reveal">
+
+      <div class="card">
+        <div class="card-head" style="background:#BA7517;">
+          <span class="card-emoji">🥮</span>
+          <div class="card-name">中秋功夫菜禮盒</div>
+          <div class="card-tagline">功夫菜替代月餅禮盒</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-amber"></div><div class="item-name">鮑魚干貝荷葉飯</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-amber"></div><div class="item-name">富貴雙方</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-amber"></div><div class="item-name">花膠虎掌燴干貝</div><div class="item-qty">×1</div></div>
+          <div class="evidence">定位「功夫菜月餅替代禮盒」，高端食材展現誠意，鮑魚干貝荷葉飯1,303件。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-amber">$1,280</span>
+            <div class="price-market">市值約 $1,550</div>
+          </div>
+          <div class="target-badge" style="background:#BA7517;">企業送禮<br>高端伴手禮</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#854F0B;">
+          <span class="card-emoji">🌕</span>
+          <div class="card-name">中秋賞月家宴組</div>
+          <div class="card-tagline">一家人圍在一起吃</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-dark-amber"></div><div class="item-name">乾燒豬腳（4入綜合）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-dark-amber"></div><div class="item-name">鮑魚海皇羹</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-dark-amber"></div><div class="item-name">蔥燒元蹄</div><div class="item-qty">×1</div></div>
+          <div class="evidence">蔥燒元蹄470件，搭配豬腳+海皇羹，增加宴席感。家庭聚會主力選擇。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-dark-amber">$1,080</span>
+            <div class="price-market">市值約 $1,280</div>
+          </div>
+          <div class="target-badge" style="background:#854F0B;">家庭聚餐<br>3–4人份</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#533806;">
+          <span class="card-emoji">🎑</span>
+          <div class="card-name">月圓小酌下酒組</div>
+          <div class="card-tagline">烤肉替代方案 × 輕鬆享用</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-espresso"></div><div class="item-name">波本煙燻烤肋排</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-espresso"></div><div class="item-name">麻辣牛雙寶（熱炒吧）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-espresso"></div><div class="item-name">五更腸旺（熱炒吧）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-espresso"></div><div class="item-name">鹹蛋山苦瓜（熱炒吧）</div><div class="item-qty">×1</div></div>
+          <div class="evidence">「不用生火的中秋烤肉」，波本烤肋排404件，熱炒吧系列中秋聚會需求強。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-espresso">$980</span>
+            <div class="price-market">市值約 $1,150</div>
+          </div>
+          <div class="target-badge" style="background:#533806;">烤肉替代<br>不用生火</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- YEAR END -->
+<section id="yearend" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">🎊</div>
+      <div class="section-info">
+        <div class="section-month">11–12月 ・ 尾牙圍爐</div>
+        <h2 class="section-title">尾牙圍爐套組</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="section-note">
+        <strong>11,459件</strong>——12月官網全年冠軍<br>乾杯套組大小版合計1,727件<br>10/15 開放早鳥預購
+      </div>
+    </div>
+    <div class="bundle-grid reveal">
+
+      <div class="card">
+        <div class="card-head" style="background:#C00000;">
+          <span class="card-emoji">🎊</span>
+          <div class="card-name">乾杯圍爐小套組</div>
+          <div class="card-tagline">官網12月爆款延伸版</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-red"></div><div class="item-name">乾燒豬腳（4入綜合）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-red"></div><div class="item-name">鮑魚海皇羹</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-red"></div><div class="item-name">梅汁叉燒排骨</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-red"></div><div class="item-name">五木麵線（贈品）</div><div class="item-qty">×1</div></div>
+          <div class="evidence">12月：豬腳532件、海皇羹620件、叉燒排骨337件，均為尾牙官網Top品項。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-red">$1,080</span>
+            <div class="price-market">市值約 $1,280</div>
+          </div>
+          <div class="target-badge" style="background:#C00000;">尾牙必備<br>2–3人份</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#2A2A2A;">
+          <span class="card-emoji">🥩</span>
+          <div class="card-name">蹄膀年終豪華組</div>
+          <div class="card-tagline">主菜擔當 × 一桌之王</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-ink"></div><div class="item-name">乾燒蹄膀（整粒）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-ink"></div><div class="item-name">大四喜（瑤柱獅子頭）</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-ink"></div><div class="item-name">富貴雙方</div><div class="item-qty">×1</div></div>
+          <div class="evidence">蹄膀459件、大四喜368件、富貴雙方465件，均為2025年12月尾牙官網前10。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-ink">$1,280</span>
+            <div class="price-market">市值約 $1,500</div>
+          </div>
+          <div class="target-badge" style="background:#2A2A2A;">尾牙主菜<br>6人桌面子</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head" style="background:#8B4513;">
+          <span class="card-emoji">🦴</span>
+          <div class="card-name">年末肉食大雜燴組</div>
+          <div class="card-tagline">煙燻+排骨+滷味 全肉陣</div>
+        </div>
+        <div class="card-body">
+          <div class="items-label">品項內容</div>
+          <div class="item-row"><div class="item-bullet bullet-sienna"></div><div class="item-name">波本煙燻烤肋排</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-sienna"></div><div class="item-name">梅汁叉燒排骨</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-sienna"></div><div class="item-name">東坡風味｜功夫銷魂滷</div><div class="item-qty">×1</div></div>
+          <div class="item-row"><div class="item-bullet bullet-sienna"></div><div class="item-name">滷肥腸</div><div class="item-qty">×1</div></div>
+          <div class="evidence">波本烤肋排383件、叉燒排骨337件，尾牙肉食陣容，適合辦公室小聚。</div>
+        </div>
+        <div class="card-footer">
+          <div class="price-block">
+            <span class="price-main price-sienna">$980</span>
+            <div class="price-market">市值約 $1,200</div>
+          </div>
+          <div class="target-badge" style="background:#8B4513;">小公司尾牙<br>辦公室聚餐</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SUMMARY TABLE -->
+<section id="summary" class="summary-section">
+  <div class="container">
+    <h2 class="summary-title reveal">21款套組總覽矩陣</h2>
+    <p class="summary-sub reveal">七大節慶 × 三大定價帶 × 完整品項對照</p>
+    <div class="reveal" style="overflow-x:auto;">
+    <table class="summary-table">
+      <thead>
+        <tr>
+          <th>節慶</th>
+          <th>套組名稱</th>
+          <th>主打品項</th>
+          <th style="text-align:right;">售價</th>
+          <th>定位</th>
+          <th>目標客群</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="fest-badge badge-spring">🧧 春節</span></td><td class="bundle-name-cell">招牌豬腳圍爐組</td><td class="items-cell">豬腳4入＋海皇羹＋花生</td><td class="price-cell price-red" style="text-align:right;">$1,080</td><td class="pos-cell">自用送禮</td><td class="target-cell">一般家庭</td></tr>
+        <tr><td></td><td class="bundle-name-cell">鮑魚海味年菜組</td><td class="items-cell">鮑魚荷葉飯＋海皇羹＋花膠</td><td class="price-cell price-brown" style="text-align:right;">$1,180</td><td class="pos-cell">高端送禮</td><td class="target-cell">企業送禮</td></tr>
+        <tr><td></td><td class="bundle-name-cell">蹄膀富貴全餐組</td><td class="items-cell">蹄膀整粒＋大四喜＋油燜筍</td><td class="price-cell price-purple" style="text-align:right;">$1,180</td><td class="pos-cell">家宴主菜</td><td class="target-cell">大家庭聚</td></tr>
+        <tr><td><span class="fest-badge badge-tomb">🌿 清明</span></td><td class="bundle-name-cell">清明三牲禮盒</td><td class="items-cell">豬腳＋玫瑰油雞＋蔥㸆鯽魚</td><td class="price-cell price-gold" style="text-align:right;">$980</td><td class="pos-cell">祭祖傳統</td><td class="target-cell">掃墓祭祖</td></tr>
+        <tr><td></td><td class="bundle-name-cell">掃墓後家族聚餐組</td><td class="items-cell">蹄膀切片＋銷魂滷＋四喜烤麩</td><td class="price-cell" style="color:#5F4A2A;text-align:right;">$1,080</td><td class="pos-cell">家族聚餐</td><td class="target-cell">掃墓後吃</td></tr>
+        <tr><td></td><td class="bundle-name-cell">春日蔬食祭祖組</td><td class="items-cell">四喜烤麩×2＋梅干杏鮑菇</td><td class="price-cell price-forest" style="text-align:right;">$880</td><td class="pos-cell">差異蔬食</td><td class="target-cell">蔬食長輩</td></tr>
+        <tr><td><span class="fest-badge badge-mother">🌸 母親節</span></td><td class="bundle-name-cell">美人蹄膀套組</td><td class="items-cell">蹄膀＋心太軟＋銀耳甜品</td><td class="price-cell price-pink" style="text-align:right;">$1,180</td><td class="pos-cell">膠原精緻</td><td class="target-cell">孝順媽媽</td></tr>
+        <tr><td></td><td class="bundle-name-cell">暖心花雕全餐組</td><td class="items-cell">花雕雞鍋＋蹄膀切片＋甜品</td><td class="price-cell price-wine" style="text-align:right;">$1,080</td><td class="pos-cell">暖胃鍋物</td><td class="target-cell">雙人用餐</td></tr>
+        <tr><td></td><td class="bundle-name-cell">海鮮感謝媽媽組</td><td class="items-cell">鮑魚荷葉飯＋花膠＋紅棗銀耳</td><td class="price-cell price-amber" style="text-align:right;">$1,280</td><td class="pos-cell">高端送禮</td><td class="target-cell">高端孝親</td></tr>
+        <tr><td><span class="fest-badge badge-dragon">🏮 端午</span></td><td class="bundle-name-cell">端午功夫菜禮盒</td><td class="items-cell">叉燒排骨＋富貴雙方＋海皇羹</td><td class="price-cell price-green" style="text-align:right;">$1,080</td><td class="pos-cell">差異送禮</td><td class="target-cell">端午送禮</td></tr>
+        <tr><td></td><td class="bundle-name-cell">端午家宴鍋物組</td><td class="items-cell">金湯酸菜魚＋豬腳＋四喜烤麩</td><td class="price-cell" style="color:#085041;text-align:right;">$980</td><td class="pos-cell">節日聚餐</td><td class="target-cell">2–3人家庭</td></tr>
+        <tr><td></td><td class="bundle-name-cell">個人熱炒端午組</td><td class="items-cell">鮑魚荷葉飯×2＋糖醋肉＋宮保雞</td><td class="price-cell price-teal" style="text-align:right;">$980</td><td class="pos-cell">個人過節</td><td class="target-cell">單身小家庭</td></tr>
+        <tr><td><span class="fest-badge badge-father">🍺 父親節</span></td><td class="bundle-name-cell">豪豬爸爸大禮盒</td><td class="items-cell">豬腳4入＋烤肋排＋滷肥腸</td><td class="price-cell price-blue" style="text-align:right;">$1,080</td><td class="pos-cell">豪邁肉食</td><td class="target-cell">孝順爸爸</td></tr>
+        <tr><td></td><td class="bundle-name-cell">牛肉愛爸下酒組</td><td class="items-cell">麻辣牛＋陳皮牛腱＋叉燒＋腸旺</td><td class="price-cell price-navy" style="text-align:right;">$1,080</td><td class="pos-cell">下酒好菜</td><td class="target-cell">牛肉愛好者</td></tr>
+        <tr><td></td><td class="bundle-name-cell">爸爸豬腳麵線組</td><td class="items-cell">添福豬腳麵線＋豬腳湯＋銷魂滷</td><td class="price-cell price-purple" style="text-align:right;">$980</td><td class="pos-cell">傳統孝親</td><td class="target-cell">傳統家庭</td></tr>
+        <tr><td><span class="fest-badge badge-mid">🥮 中秋</span></td><td class="bundle-name-cell">中秋功夫菜禮盒</td><td class="items-cell">鮑魚荷葉飯＋富貴雙方＋花膠</td><td class="price-cell price-amber" style="text-align:right;">$1,280</td><td class="pos-cell">高端伴手禮</td><td class="target-cell">企業送禮</td></tr>
+        <tr><td></td><td class="bundle-name-cell">中秋賞月家宴組</td><td class="items-cell">豬腳4入＋海皇羹＋蔥燒元蹄</td><td class="price-cell price-dark-amber" style="text-align:right;">$1,080</td><td class="pos-cell">家庭聚餐</td><td class="target-cell">3–4人家庭</td></tr>
+        <tr><td></td><td class="bundle-name-cell">月圓小酌下酒組</td><td class="items-cell">烤肋排＋麻辣牛＋腸旺＋苦瓜</td><td class="price-cell price-espresso" style="text-align:right;">$980</td><td class="pos-cell">烤肉替代</td><td class="target-cell">小酌朋友</td></tr>
+        <tr><td><span class="fest-badge badge-yearend">🎊 尾牙</span></td><td class="bundle-name-cell">乾杯圍爐小套組</td><td class="items-cell">豬腳4入＋海皇羹＋叉燒排骨</td><td class="price-cell price-red" style="text-align:right;">$1,080</td><td class="pos-cell">尾牙必備</td><td class="target-cell">2–3人圍爐</td></tr>
+        <tr><td></td><td class="bundle-name-cell">蹄膀年終豪華組</td><td class="items-cell">蹄膀整粒＋大四喜＋富貴雙方</td><td class="price-cell price-ink" style="text-align:right;">$1,280</td><td class="pos-cell">尾牙主菜</td><td class="target-cell">6人桌主菜</td></tr>
+        <tr><td></td><td class="bundle-name-cell">年末肉食大雜燴組</td><td class="items-cell">烤肋排＋叉燒＋銷魂滷＋肥腸</td><td class="price-cell price-sienna" style="text-align:right;">$980</td><td class="pos-cell">辦公尾牙</td><td class="target-cell">小公司聚</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing-section">
+  <div class="container">
+    <h2 class="summary-title reveal" style="color:var(--ink);">套組定價策略 × 執行建議</h2>
+    <p class="summary-sub reveal" style="color:var(--ink-mid);">三大定價帶 ・ 全節慶套用</p>
+
+    <div class="tier-grid reveal">
+      <div class="tier-card" style="background:#f5fff8; border-color:#3B6D11; color:var(--ink);">
+        <div class="tier-label" style="color:#3B6D11;">入門帶</div>
+        <div class="tier-range" style="color:#3B6D11;">$880–$980</div>
+        <div class="tier-desc">小家庭自用、蔬食、個人族群<br>配菜＋主菜2–3件為主<br>適合自用不送禮的場景</div>
+        <div class="tier-examples">適用套組</div>
+        <div class="tier-list">清明蔬食組 ／ 端午個人組<br>父親節麵線組 ／ 中秋下酒組<br>尾牙肉食組</div>
+      </div>
+      <div class="tier-card" style="background:#fff0f0; border-color:#C00000; color:var(--ink);">
+        <div class="tier-label" style="color:#C00000;">主力帶</div>
+        <div class="tier-range" style="color:#C00000;">$1,080</div>
+        <div class="tier-desc">自用＋送禮均宜，最主流定價<br>豬腳／蹄膀＋1–2件配菜<br>適合所有節慶主力款</div>
+        <div class="tier-examples">適用套組</div>
+        <div class="tier-list">春節豬腳組 ／ 母親節暖心組<br>端午禮盒 ／ 父親節豬腳組<br>中秋家宴組 ／ 尾牙圍爐組</div>
+      </div>
+      <div class="tier-card" style="background:#fffbf0; border-color:#8B4513; color:var(--ink);">
+        <div class="tier-label" style="color:#8B4513;">高端帶</div>
+        <div class="tier-range" style="color:#8B4513;">$1,180–$1,280</div>
+        <div class="tier-desc">企業送禮、孝親高端版<br>鮑魚／花膠／整粒蹄膀為主角<br>適合春節、母親節、中秋</div>
+        <div class="tier-examples">適用套組</div>
+        <div class="tier-list">春節鮑魚組 ／ 春節蹄膀組<br>母親節海鮮組 ／ 中秋功夫菜組<br>尾牙蹄膀豪華組</div>
+      </div>
+    </div>
+
+    <div class="exec-grid reveal">
+      <div class="exec-card">
+        <div class="exec-no">①</div>
+        <div>
+          <div class="exec-title">統一包裝識別</div>
+          <div class="exec-body">精美提袋＋節慶貼紙，不同節慶配色，提升禮品感。成本控制在$50/套以下。</div>
+        </div>
+      </div>
+      <div class="exec-card">
+        <div class="exec-no">②</div>
+        <div>
+          <div class="exec-title">套組限定優惠</div>
+          <div class="exec-body">單獨購買各品項合計 vs 套組價，讓消費者感覺省$150–200，提升購買動機。</div>
+        </div>
+      </div>
+      <div class="exec-card">
+        <div class="exec-no">③</div>
+        <div>
+          <div class="exec-title">早鳥預購機制</div>
+          <div class="exec-body">各節慶前4–6週開放預購，早鳥折$100。尾牙10/15開賣可拉升10月低谷業績。</div>
+        </div>
+      </div>
+      <div class="exec-card">
+        <div class="exec-no">④</div>
+        <div>
+          <div class="exec-title">彈性加購設計</div>
+          <div class="exec-body">套組＋甜品加購$80–120（宮廷甜品系列），提升客單價15–20%。</div>
+        </div>
+      </div>
+      <div class="exec-card">
+        <div class="exec-no">⑤</div>
+        <div>
+          <div class="exec-title">官網限定話題</div>
+          <div class="exec-body">部分套組做「官網獨家」，配合主廚推薦故事行銷，強化官網購買誘因。</div>
+        </div>
+      </div>
+      <div class="exec-card">
+        <div class="exec-no">⑥</div>
+        <div>
+          <div class="exec-title">10月預購拉升</div>
+          <div class="exec-body">10月是全年官網最低（378件），10/15開放尾牙套組，目標預購500件以上。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <strong>鄧師傅功夫菜 ・ 博竑食品有限公司</strong><br>
+  透心入味、透徹把關 ｜ 2026年節慶套組規劃 ｜ 依2025官網銷售數據設計
+</footer>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      e.target.style.transitionDelay = (i * 0.08) + 's';
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Active nav highlight
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const navObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const link = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+      if (link) {
+        link.classList.add('active');
+        link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+  });
+}, { threshold: 0.3 });
+
+sections.forEach(s => navObs.observe(s));
+</script>
+</body>
+</html>
